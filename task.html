@@ -1,0 +1,22 @@
+<!-- Найти API банков рб (нб обязательно) и с их помощью перевести для 4 валют(евро, доллар, рос. рубль, бел. рубль):
+1) деньги во все валюты на сейчас
+2) деньги во все валюты по истории курсов валют-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <script>
+            var mydata3 = $.get("http://www.nbrb.by/api/exrates/rates/145");
+            var mydata = $.getJSON("http://www.nbrb.by/api/exrates/rates/145");
+            var mydata2 = JSON.stringify(mydata);
+        </script>
+    </head>
+    <body>
+        <script>
+            document.write(mydata2 +" 2"+"<br>" );
+            document.write(mydata.readyState +" 1"+"<br>" );
+            document.write(JSON.stringify(mydata3) +" 3"+"<br>" );
+        </script>
+    </body>
+</html>
